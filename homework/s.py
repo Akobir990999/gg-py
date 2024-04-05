@@ -101,13 +101,13 @@
 # even(13)
 # even(34567)    
 # #25
-def issquare(k):
-    a = k**0.5
-    if int(a)**2==k:
-        print("true")
-    else:
-        print("false")
-issquare(9)
+# def issquare(k):
+#     a = k**0.5
+#     if int(a)**2==k:
+#         print("true")
+#     else:
+#         print("false")
+# issquare(9)
 
 
 
