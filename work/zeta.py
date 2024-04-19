@@ -1,40 +1,97 @@
+# class user:
+#     def __init__(self,ism,familiya,email,yosh):
+#         self.ism = ism
+#         self.familiya = familiya
+#         self.email = email
+#         self.yosh = yosh
+#     def get_info(self):
+#         print(f"foydalanuvchi ismi:{self.ism},familiyasi : {self.familiya},yoshi:{self.yosh},foydalanuvchi emaili:{self.email}")
+
+#     def get_ism(self):
+#         print(self.ism)
+
+#     def get_familiya(self):
+#         print(self.familiya)
+#     def get_em(self):
+#         print(self.email)
+#     def get_year(self):
+#         print(self.yosh)
+#     def get_year1(self):
+#         print(int(input("yini kirit"))-self.yosh)
+# a = user("akobir","kuchkarboev","bobirsobirov873@gmail.com",12)
+# a.get_info()
+# a.get_familiya()
+# a.get_em()
+# a.get_year()
+# a.get_year1()
+
+
 # class student:
-#     def __init__(self,name,familiya,age,kurs):
-#         self.name=input = name
-#         self.familiya=input = familiya
-#         self.age=in = age
-#         self.kurs = kurs
-# st1 = student("akobir","sobirov",12,4)
-# st2 = student("ali","valiyev",23,4)
+#     def __init__(self,ism,familiya,yosh):
+#         self.ism = ism
+#         self.familiya = familiya 
+#         self.yosh = yosh
+#         self.kurs = 1
+#         self.fanlar = []
+#     def get_info(self):
+#         print(f"mening ismim {self.ism}")
+        
+#     def set_kurs(self):
+#         self.kurs+=1
+        
+#     def add_subject(self,fan):
+#         self.fanlar.append(fan)
 
-# print(st1.age)
-# print(st1.name)
-# print(st1.familiya)
-# print(st1.kurs)
+# student1 = student("akobir","sobirov",12)
+# student1.set_kurs()
+# student1.add_subject("matamatika")
+# print(student1)
 
-# print(st2.age)
-# print(st2.name)
-# print(st2.familiya)
-# print(st2.kurs)
+# class avto:
+#     def __init__(self,model,rang,tezlik,narx):
+#         self.model = model
+#         self.rang = rang
+#         self.narx = narx
+#         self.tezlik = tezlik
+#         self.kilometr = 0   
+#     def avto_model(self):
+#         print(f"mashinani modeli {self.model}")
+#     def avto_rang(self):
+#         print(f"moshinaning rangi {self.rang}")
+#     def avto_narx(self):
+#         print(f"avtomobilni narxi {self.narx}")
+#     def avto_tezlik(self):
+#         print(f"avtomobilni tezligi {self.tezlik}km/h")
+#     def update_kilometr(self):
+#         self.kilometr+=1
+#     def get_info(self):
+#         print(f"avtomobil modeli {self.model},narxi {self.narx},tezligi {self.tezlik}km/h,rangi {self.rang}")
 
-# print(st1.__dict__)
-# print(st2.__dict__)
-# print(220+187)
+# avto1 = avto("mersades","yashil",370,"300000$")
+# avto1.avto_model()
+# avto1.avto_rang()
+# avto1.avto_tezlik()
+# avto1.avto_narx()
+# avto1.get_info()
 
-class Car:
-    def __init__(self,ismi,modeli,yili,narxi):
-        self.ism = ismi
-        self. model = modeli
-        self.yil = yili
-        self. narx = narxi
+class avto_salon:
+    def __init__(self,nomi,manzili,*avtomobillar):
+        self.nom = nomi
+        self.manzil = manzili
+        self.avtomobil = avtomobillar
+        self.mashinalar = []
+    def new_avto(self):
+        self.mashinalar.append(self.avtomobil)
 
-car1 = Car("porche 911","porche",2020,50000)
-print(car1.__dict__)
-car2 = Car("mersades amg","mersades",2022,200000)
-print(car2.__dict__)
-car3 = Car("mersades gle","mersades",2021,200000)
-print(car3.__dict__)
-car4 = Car("lamborgini aventador","lamborgini",2023,300000)
-print(car4.__dict__)
-car5 = Car("nexia 2","nexia",2020,30000) 
-print(car5.__dict__)
+    def remowe_avto(self):
+        a = input("ochirmoqchi bolgan avtoyingni kirit")
+        for i in a:
+            if i in self.mashinalar:
+                print(remowe(i))
+
+a = avto_salon("a","df","mersades","bmw")
+a.new_avto()
+a.remowe_avto()
+print(self.mashinalar)
+    
+            
